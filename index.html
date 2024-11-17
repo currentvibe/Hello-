@@ -1,2 +1,35 @@
-git add .
-git commit -m "Initial commit"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React App Test</title>
+    <!-- Add React and ReactDOM from CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Add Babel for JSX support -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- Add Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <!-- Your React component -->
+    <script type="text/babel">
+        const HelloApp = () => {
+            return (
+                <div className="flex items-center justify-center min-h-screen bg-gray-100">
+                    <div className="bg-white p-8 rounded-lg shadow-md">
+                        <h1 className="text-3xl font-bold text-gray-800">Hi!</h1>
+                    </div>
+                </div>
+            );
+        };
+
+        // Render the app
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<HelloApp />);
+    </script>
+</body>
+</html>
